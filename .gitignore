@@ -36,3 +36,9 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# resources
+/source
+/sources
+/resource
+/resources
