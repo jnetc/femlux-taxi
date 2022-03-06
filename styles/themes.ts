@@ -5,7 +5,10 @@ declare module 'styled-components' {
       bg: string;
       primary: string;
       secondary: string;
-      textClr: string;
+      txtPrimaryClr: string;
+      txtSecondaryClr: string;
+
+      txtSelectedLang: string;
       borderClr: string;
       cardShadow: string;
     };
@@ -16,10 +19,13 @@ const themes = {
   light: {
     borderRadius: '15px',
     colors: {
-      bg: 'hsl(240, 4%, 95%)',
+      bg: 'hsl(0, 0%, 96%)',
       primary: 'hsl(315, 100%, 70%)',
-      secondary: 'hsl(59, 94%, 57%)',
-      textClr: 'hsl(75, 12%, 7%)',
+      secondary: 'hsl(251, 35%, 56%)',
+      txtPrimaryClr: 'hsl(75, 12%, 7%)',
+      txtSecondaryClr: 'hsl(0, 0%, 32%)',
+      txtSelectedLang: 'hsl(75, 12%, 7%)',
+
       borderClr: 'hsl(233, 17%, 90%)',
       cardShadow: 'hsl(240, 40%, 89%)',
     },
@@ -28,10 +34,13 @@ const themes = {
   dark: {
     borderRadius: '50px',
     colors: {
-      bg: 'hsl(240, 26%, 22%)',
-      primary: 'hsl(241, 30%, 52%)',
-      secondary: 'hsl(241, 52%, 52%)',
-      textClr: 'hsl(240, 69%, 90%)',
+      bg: 'hsl(76, 13%, 17%)',
+      primary: 'hsl(315, 100%, 70%)',
+      secondary: 'hsl(251, 35%, 56%)',
+      txtPrimaryClr: 'hsl(0, 0%, 96%)',
+      txtSecondaryClr: 'hsl(0, 0%, 75%)',
+      txtSelectedLang: 'hsl(75, 12%, 7%)',
+
       borderClr: 'hsl(241, 30%, 52%)',
       cardShadow: 'hsl(240, 26%, 17%)',
     },

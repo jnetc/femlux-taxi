@@ -6,6 +6,8 @@ import Document, {
   DocumentContext,
 } from 'next/document';
 
+import { setInitialTheme } from '@Helpers/critical';
+
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -13,15 +15,6 @@ class MyDocument extends Document {
     return initialProps;
   }
   render() {
-    const setInitialTheme = `
-      function getUserPreference() {
-        if(window.localStorage.getItem('theme')) {
-          return window.localStorage.getItem('theme')
-        }
-        return 'dark'
-      }
-      document.documentElement.dataset.theme = getUserPreference();
-    `;
     return (
       <Html>
         <Head>
