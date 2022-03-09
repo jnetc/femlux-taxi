@@ -7,17 +7,15 @@ import { useLanguageState } from '@Hooks/useLanguageState';
 import { LangMenuButton } from './LangMenuButton';
 
 const LangSwitchStyle = styled.div<{ isActive: boolean }>`
-  --lang-switcher-height-width: 3.125rem;
-  --space-button: 0.5rem;
-  width: var(--lang-switcher-height-width);
-  height: var(--lang-switcher-height-width);
+  width: var(--lang-button-height-width);
+  height: var(--lang-button-height-width);
   position: relative;
 
   &.show-menu > button:nth-of-type(2) {
     opacity: 1;
     transition-delay: 0s;
     transform: translateY(
-        calc(var(--lang-switcher-height-width) + var(--space-button))
+        calc(var(--lang-button-height-width) + var(--lang-button-space))
       )
       scale(1);
   }
@@ -25,7 +23,7 @@ const LangSwitchStyle = styled.div<{ isActive: boolean }>`
     opacity: 1;
     transition-delay: 0.1s;
     transform: translateY(
-        calc(var(--lang-switcher-height-width) * 2 + var(--space-button) * 2)
+        calc(var(--lang-button-height-width) * 2 + var(--lang-button-space) * 2)
       )
       scale(1);
   }

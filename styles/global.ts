@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: bold;
     font-style: normal;
     font-display: swap;
+    size-adjust: 100%;
   }
 
   @font-face {
@@ -15,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+    size-adjust: 100%;
   }
   @media (prefers-reduced-motion: no-preference) {
     html {
@@ -23,6 +25,11 @@ export const GlobalStyle = createGlobalStyle`
   }
   :root {
     --theme-button-width-height: 30px;
+    --lang-button-height-width: 3.125rem;
+    --lang-button-space: 0.5rem;
+    --gradient: linear-gradient( to right,
+        ${({ theme }) => theme.colors.primary},
+        ${({ theme }) => theme.colors.secondary})
   }
   *,
   ::after,
@@ -56,6 +63,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   button {
     border: none;
+    background-color: transparent;
     cursor: pointer;
   }
 
@@ -72,7 +80,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 2em;
   }
 
-  p {
+  p, span {
     font-family: 'Roboto';
     color: ${({ theme }) => theme.colors.txtSecondaryClr};
   }

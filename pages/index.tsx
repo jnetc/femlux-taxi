@@ -8,7 +8,8 @@ import Head from 'next/head';
 import { LanguageState, useLanguageState } from '@Hooks/useLanguageState';
 import { useLangSwitcher } from '@Hooks/useLangSwitcher';
 // Components
-import Navigation from '@Components/navigation/Navigation';
+import Navigation from '@Components/navigation';
+import SectionHome from '@Components/section-home';
 import { extraCSS } from '@Helpers/critical';
 
 interface Intro<T> {
@@ -48,8 +49,9 @@ const Home: NextPage = ({
       </Head>
 
       <Navigation />
-
-      <main></main>
+      <main>
+        <SectionHome />
+      </main>
       <footer>Footer</footer>
     </LanguageState.Provider>
   );

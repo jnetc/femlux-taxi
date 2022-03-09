@@ -3,8 +3,8 @@ import { FC } from 'react';
 import styled from 'styled-components';
 
 const Lang = styled.button`
-  width: var(--lang-switcher-height-width);
-  height: var(--lang-switcher-height-width);
+  width: var(--lang-button-height-width);
+  height: var(--lang-button-height-width);
   display: flex;
   justify-content: center;
   align-items: center;

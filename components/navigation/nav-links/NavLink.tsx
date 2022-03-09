@@ -7,6 +7,11 @@ const NavLinkStyle = styled.a`
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 export const NavLink: FC<{ url: string }> = ({ children, url }) => {
