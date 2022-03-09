@@ -21,6 +21,9 @@ export const GlobalStyle = createGlobalStyle`
       scroll-behavior: smooth;
     }
   }
+  :root {
+    --theme-button-width-height: 30px;
+  }
   *,
   ::after,
   ::before {
@@ -29,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
   }
   html, body, #__next {
     /* height: max(800px, 100%); */
@@ -82,4 +85,61 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1.125em;
     line-height: 1.4;
   }
+
+  html[data-theme='light'] .theme-switcher,
+  html[data-theme='dark'] .theme-switcher {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: ${({ theme }) => theme.colors.txtPrimaryClr};
+    border-radius: 50%;
+     transition: all 0.3s ease-in-out;
+  }
+  html[data-theme='light'] .theme-switcher::after,
+  html[data-theme='dark'] .theme-switcher::after {
+    content: '';
+    width: calc(var(--theme-button-width-height) / 1.5);
+    height: calc(var(--theme-button-width-height) / 1.5);
+    position: absolute;
+    top: calc(-1 * var(--theme-button-width-height) / 4);
+    right: calc(-1 * var(--theme-button-width-height) / 4);
+    background-color: ${({ theme }) => theme.colors.bg};
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    z-index: 3;
+  }
+
+  html[data-theme='light'] .theme-switcher {
+    width: calc(var(--theme-button-width-height) / 1.7);
+    height: calc(var(--theme-button-width-height) / 1.7);
+    transform: translate(-50%, -50%) rotate(-55deg);
+    box-shadow: 14px 0 0 -6.5px ${({ theme }) => theme.colors.txtPrimaryClr},
+      -14px 0 0 -6.5px ${({ theme }) => theme.colors.txtPrimaryClr},
+      0 14px 0 -6.5px ${({ theme }) => theme.colors.txtPrimaryClr},
+      0 -14px 0 -6.5px ${({ theme }) => theme.colors.txtPrimaryClr},
+      10px 10px 0 -6.5px ${({ theme }) => theme.colors.txtPrimaryClr},
+      -10px -10px 0 -6.5px ${({ theme }) => theme.colors.txtPrimaryClr},
+      -10px 10px 0 -6.5px ${({ theme }) => theme.colors.txtPrimaryClr},
+      10px -10px 0 -6.5px ${({ theme }) => theme.colors.txtPrimaryClr};
+    }
+  html[data-theme='light'] .theme-switcher::after {
+    transform: translateX(100px);
+  }
+  html[data-theme='dark'] .theme-switcher::after {
+    transform: translateX(0);
+  }
+  html[data-theme='dark'] .theme-switcher {
+    width: calc(var(--theme-button-width-height) / 1.7);
+    height: calc(var(--theme-button-width-height) / 1.7);
+    transform: translate(-50%, -50%) rotate(0);
+    box-shadow: 0px 0 0 -0px ${({ theme }) => theme.colors.txtPrimaryClr},
+      -0px 0 0 -0px ${({ theme }) => theme.colors.txtPrimaryClr},
+      0 0px 0 -0px ${({ theme }) => theme.colors.txtPrimaryClr},
+      0 -0px 0 -0px ${({ theme }) => theme.colors.txtPrimaryClr},
+      0px 0px 0 -0px ${({ theme }) => theme.colors.txtPrimaryClr},
+      -0px -0px 0 -0px ${({ theme }) => theme.colors.txtPrimaryClr},
+      -0px 0px 0 -0px ${({ theme }) => theme.colors.txtPrimaryClr},
+      0px -0px 0 -0px ${({ theme }) => theme.colors.txtPrimaryClr};
+  }
+
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from './NavLink';
-
-import { useStore } from '@Hooks/useZustand';
+// Hook
+import { useLanguageState } from '@Hooks/useLanguageState';
 
 const NavLinksStyle = styled.nav`
   display: flex;
@@ -12,11 +12,11 @@ const NavLinksStyle = styled.nav`
 `;
 
 export const NavLinks = () => {
-  const { lang } = useStore();
+  const { language } = useLanguageState();
   const links = urls.map(link => {
     return (
       <NavLink key={link.anchor} url={link.anchor}>
-        {link[lang]}
+        {link[language]}
       </NavLink>
     );
   });

@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
-import { useState, MouseEvent, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 // Hooks
-import { useStore } from '@Hooks/useZustand';
+import { useLanguageState } from '@Hooks/useLanguageState';
 // Components
 import { LangMenuButton } from './LangMenuButton';
 
@@ -33,19 +33,15 @@ const LangSwitchStyle = styled.div<{ isActive: boolean }>`
 
 export const LangButton = () => {
   const { asPath } = useRouter();
-  const { lang } = useStore();
-  const [showLangMenu, setShowLangMenu] = useState(false);
-  const [langArr, setLangArr] = useState(['fi', 'ru', 'en']);
+  const { languages } = useLanguageState();
 
-  const langMenuHandler = (event: MouseEvent<HTMLDivElement>) => {
+  const [showLangMenu, setShowLangMenu] = useState(false);
+
+  const langMenuHandler = () => {
     setShowLangMenu(!showLangMenu);
-    const el = event.target as HTMLDivElement;
-    console.log(el.textContent);
-    const selected = langArr.find(l => l === el.textContent) as string;
-    const unselected = langArr.filter(language => language !== el.textContent);
-    setLangArr([selected, ...unselected]);
   };
 
+  // Handle outside click
   useEffect(() => {
     if (!showLangMenu) return;
 
@@ -55,15 +51,8 @@ export const LangButton = () => {
     return () => document.removeEventListener('click', outsideClick);
   }, [showLangMenu]);
 
-  const buttonsOrder = langArr.map(order => {
-    return (
-      <LangMenuButton
-        key={order}
-        path={asPath}
-        isActive={lang === order}
-        lang={order}
-      />
-    );
+  const buttonsOrder = languages.map(order => {
+    return <LangMenuButton key={order} path={asPath} lang={order} />;
   });
 
   return (

@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { FC } from 'react';
 import styled from 'styled-components';
 
-const Lang = styled.button<{ isActive?: boolean }>`
+const Lang = styled.button`
   width: var(--lang-switcher-height-width);
   height: var(--lang-switcher-height-width);
   display: flex;
@@ -10,17 +10,21 @@ const Lang = styled.button<{ isActive?: boolean }>`
   align-items: center;
   position: absolute;
   top: 0;
-  color: ${({ isActive, theme }) =>
-    isActive ? theme.colors.txtSelectedLang : theme.colors.primary};
+  color: ${({ theme }) => theme.colors.txtPrimaryClr};
   border: 2px solid ${({ theme }) => theme.colors.primary};
-  background-color: ${({ isActive, theme }) =>
-    isActive ? theme.colors.primary : theme.colors.bg};
+
+  background-color: transparent;
   font-size: 1.125em;
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.bg};
+    background-color: ${({ theme }) => theme.colors.primary};
+  }
 
   &:nth-of-type(1) {
     z-index: 3;
@@ -43,13 +47,11 @@ const Lang = styled.button<{ isActive?: boolean }>`
 export const LangMenuButton: FC<{
   path: string;
   lang: string;
-  isActive?: boolean;
-}> = ({ path, lang, isActive }) => {
+}> = ({ path, lang }) => {
   const { push } = useRouter();
 
   return (
     <Lang
-      isActive={isActive}
       onClick={() => {
         push(`${path}`, `${path}`, { locale: lang });
       }}

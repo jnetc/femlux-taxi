@@ -1,71 +1,45 @@
-import { useState, MouseEvent } from 'react';
+import { useEffect } from 'react';
 import styled from 'styled-components';
+// Hook
+import { useThemeState } from '@Hooks/useThemeState';
+// Types
+import { ThemesType } from '@Types';
 
 const ThemeButtonStyle = styled.div`
-  --theme-button-width-height: 30px;
-  width: var(--theme-button-width-height);
-  height: var(--theme-button-width-height);
-
+  width: calc(var(--theme-button-width-height) * 1.2);
+  height: calc(var(--theme-button-width-height) * 1.2);
   position: relative;
-  /* background-color: white; */
+  overflow: hidden;
+  cursor: pointer;
 `;
 
-const SunStyle = styled.span`
-  width: var(--theme-button-width-height);
-  height: var(--theme-button-width-height);
-  position: absolute;
-  background-color: ${({ theme }) => theme.colors.txtPrimaryClr};
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0) 50%,
-    #f0f0f0 50%
-  );
-  &::before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(
-      circle,
-      #f0f0f0 30%,
-      rgba(0, 0, 0, 0) 31%,
-      rgba(0, 0, 0, 0) 50%,
-      #f0f0f0 50%
-    );
-    transform: rotate(45deg);
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(
-      circle,
-      #f0f0f0 30%,
-      rgba(0, 0, 0, 0) 31%,
-      rgba(0, 0, 0, 0) 50%,
-      #f0f0f0 50%
-    );
-    transform: rotate(0deg);
-  }
-`;
-const MoonStyle = styled.span`
-  width: var(--theme-button-width-height);
-  height: var(--theme-button-width-height);
-  position: absolute;
-  background-color: ${({ theme }) => theme.colors.txtPrimaryClr};
-  border-radius: 50%;
-`;
+const DARK_SCHEME = 'dark';
+const LIGHT_SCHEME = 'light';
 
 export const ThemeButton = () => {
+  const { theme, switchTheme } = useThemeState();
+  const toggleTheme = () => {
+    const hasSameValue = theme === DARK_SCHEME ? LIGHT_SCHEME : DARK_SCHEME;
+    switchTheme(hasSameValue);
+  };
+
+  useEffect(() => {
+    const lS = localStorage.getItem('theme') as ThemesType;
+    if (!lS) {
+      localStorage.setItem('theme', DARK_SCHEME);
+      document.documentElement.dataset.theme = DARK_SCHEME;
+    }
+    switchTheme(lS);
+  }, [switchTheme]);
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+    document.documentElement.dataset.theme = theme;
+  }, [theme]);
+
   return (
-    <ThemeButtonStyle>
-      <SunStyle />
-      {/* <MoonStyle /> */}
+    <ThemeButtonStyle onClick={toggleTheme}>
+      <span className="theme-switcher" />
     </ThemeButtonStyle>
   );
 };
