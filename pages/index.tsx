@@ -12,21 +12,20 @@ import Navigation from '@Components/navigation';
 import SectionHome from '@Components/section-home';
 import { extraCSS } from '@Helpers/critical';
 
-interface Intro<T> {
-  title: T;
-  subtitle: T;
-  id: T;
-}
+// interface Intro<T> {
+//   title: T;
+//   subtitle: T;
+//   id: T;
+// }
 interface Navigation<T> {
   navigation: Array<{ link: T }>;
 }
-interface Data {
-  intro: Intro<string>;
-  nav: Navigation<string>;
-}
+// interface Data {
+//   intro: Intro<string>;
+//   nav: Navigation<string>;
+// }
 
 const Home: NextPage = ({
-  data,
   lang,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { switchLang, languages, switchLanguages } = useLanguageState();
