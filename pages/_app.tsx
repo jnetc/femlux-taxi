@@ -5,6 +5,8 @@ import { useState } from 'react';
 import { ThemeState, useThemeState } from '@Hooks/useThemeState';
 
 // Styling
+import '@Styles/fonts.css';
+// import '@Styles/global.css';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '@Styles/global';
 import { themes } from '@Styles/themes';
