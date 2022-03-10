@@ -1,17 +1,10 @@
 import { useEffect } from 'react';
-import styled from 'styled-components';
 // Hook
 import { useThemeState } from '@Hooks/useThemeState';
 // Types
 import { ThemesType } from '@Types';
 
-const ThemeButtonStyle = styled.div`
-  width: calc(var(--theme-button-width-height) * 1.2);
-  height: calc(var(--theme-button-width-height) * 1.2);
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-`;
+import styles from './theme-button.module.css';
 
 const DARK_SCHEME = 'dark';
 const LIGHT_SCHEME = 'light';
@@ -38,8 +31,8 @@ export const ThemeButton = () => {
   }, [theme]);
 
   return (
-    <ThemeButtonStyle onClick={toggleTheme}>
-      <span className="theme-switcher" />
-    </ThemeButtonStyle>
+    <div className={styles.module} onClick={toggleTheme}>
+      <span className={styles.theme_switcher} />
+    </div>
   );
 };

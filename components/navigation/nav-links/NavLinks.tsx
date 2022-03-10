@@ -1,15 +1,8 @@
-import styled from 'styled-components';
 import { NavLink } from './NavLink';
 // Hook
 import { useLanguageState } from '@Hooks/useLanguageState';
 
-const NavLinksStyle = styled.nav`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin-left: auto;
-`;
+import styles from './nav-links.module.css';
 
 export const NavLinks = () => {
   const { language } = useLanguageState();
@@ -20,7 +13,7 @@ export const NavLinks = () => {
       </NavLink>
     );
   });
-  return <NavLinksStyle>{links}</NavLinksStyle>;
+  return <nav className={styles.module}>{links}</nav>;
 };
 
 const urls = [

@@ -43,8 +43,8 @@ export const GlobalStyle = createGlobalStyle`
     transition: all .3s ease-in-out;
   }
   html, body, #__next {
-    /* height: max(800px, 100%); */
-    height: 100%;
+    height: max(800px, 100%);
+    /* height: 100%; */
   }
   body {
     max-width: 1920px;
@@ -52,6 +52,10 @@ export const GlobalStyle = createGlobalStyle`
     position: relative;
     padding: 2rem 2.5rem;
     margin: 0 auto;
+    overflow-x: hidden;
+    @media (max-width: 960px) {
+    padding: 1rem 1rem;
+  }
   }
   #__next {
 

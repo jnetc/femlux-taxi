@@ -1,0 +1,15 @@
+.module {
+  font-size: clamp(3em, 5vw, 6em);
+  text-transform: uppercase;
+  line-height: 1.1;
+  word-spacing: 999px;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 960px) {
+  .module {
+    font-size: clamp(2.5em, 10vw, 5em);
+  }
+}

@@ -13,8 +13,11 @@ export const setInitialTheme = `
 export const extraCSS = `
   html[data-theme=dark] {
     background-color: hsl(76, 13%, 17%);
+    color: hsl(0, 0%, 96%);
   }
+
   html[data-theme=light] {
     background-color: hsl(0, 0%, 96%);
+    color: hsl(75, 12%, 7%);
   }
 `;

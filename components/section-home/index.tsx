@@ -1,43 +1,40 @@
-import styled from 'styled-components';
+import styles from './home-index.module.css';
 import { ActionBlock } from './action-buttons/ActionBlock';
-
-const SectionHomeStyle = styled.section`
-  height: calc(100vh - var(--lang-button-height-width) - 4rem);
-  display: flex;
-  align-items: center;
-  column-gap: 10rem;
-`;
-
-const RightBlockStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 0 1 60%;
-  border: 1px solid red;
-`;
-const LeftBlockStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 0 1 40%;
-  row-gap: 1.5rem;
-`;
-
+// Components
 import { Title } from '@Components/title/Title';
 import { Description } from '@Components/description/Description';
+import { FrontCarMob } from './front-car/FrontCarMob';
+import { FrontCar } from './front-car/FrontCar';
+// Hook
+import { useLanguageState } from '@Hooks/useLanguageState';
 
 const Main = () => {
+  const { language } = useLanguageState();
   return (
-    <SectionHomeStyle>
-      <LeftBlockStyle>
-        <Title>Быстро Надежно Безопасно!</Title>
+    <section className={styles.module}>
+      <div className={styles.left_block}>
+        <span className={styles.taxi_text}>TAXI</span>
+        <Title>{title[language]}</Title>
+        <div className={styles.insert_block}>
+          <FrontCarMob />
+        </div>
         <Description>
           Если желаете во время, с комфортом и с хорошим настроением добраться
           до места назначения - звоните и заказывайте!
         </Description>
         <ActionBlock />
-      </LeftBlockStyle>
-      <RightBlockStyle>IMAGE</RightBlockStyle>
-    </SectionHomeStyle>
+      </div>
+      <div className={styles.right_block}>
+        <FrontCar />
+      </div>
+    </section>
   );
 };
 
 export default Main;
+
+const title = {
+  en: 'Fast Reliably Safely!',
+  ru: 'Быстро Надежно Безопасно!',
+  fi: 'Nopeasti Luotettavasti Turvallisesti!',
+};

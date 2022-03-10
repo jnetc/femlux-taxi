@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
   i18n: {
     locales: ['en', 'ru', 'fi'],
@@ -9,9 +9,4 @@ const nextConfig = {
   images: {
     domains: ['www.datocms-assets.com'],
   },
-  compiler: {
-    styledComponents: true,
-  },
 };
-
-module.exports = nextConfig;

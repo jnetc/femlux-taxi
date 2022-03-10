@@ -1,0 +1,12 @@
+.module {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-left: auto;
+}
+@media (max-width: 960px) {
+  .module {
+    display: none;
+  }
+}

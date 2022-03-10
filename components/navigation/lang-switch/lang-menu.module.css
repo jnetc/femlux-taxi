@@ -1,0 +1,40 @@
+.module {
+  width: var(--lang-button-height-width);
+  height: var(--lang-button-height-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  color: var(--txtPrimaryClr);
+  border: 2px solid var(--primary);
+
+  background-color: transparent;
+  font-size: 1.125em;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.module:hover {
+  color: var(--bg);
+  background-color: var(--primary);
+}
+
+.module:nth-of-type(1) {
+  z-index: 3;
+}
+.module:nth-of-type(2),
+.module:nth-of-type(3) {
+  opacity: 0;
+  transform: translateY(0) scale(0);
+}
+.module:nth-of-type(2) {
+  transition-delay: 0.1s;
+  z-index: 2;
+}
+.module:nth-of-type(3) {
+  transition-delay: 0s;
+  z-index: 1;
+}

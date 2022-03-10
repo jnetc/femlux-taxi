@@ -1,0 +1,15 @@
+.module {
+  height: 42px;
+  @media (max-width: 960px) {
+    height: 28px;
+  }
+}
+.primary_fill {
+  fill: var(--primary);
+}
+.white_to_black {
+  fill: var(--txtPrimaryClr);
+}
+.black_to_white {
+  fill: var(--bg);
+}

@@ -1,0 +1,13 @@
+.ellipse_fill {
+  fill: var(--bg);
+  transition: fill 0.3s ease-in-out;
+}
+.start_gradient {
+  stop-color: var(--primary);
+}
+.end_gradient {
+  stop-color: var(--secondary);
+}
+
+@media (max-width: 960px) {
+}

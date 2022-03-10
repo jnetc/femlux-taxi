@@ -1,0 +1,10 @@
+.module {
+  color: var(--txtPrimaryClr);
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease-in-out;
+}
+.module:hover {
+  color: var(--primary);
+}
