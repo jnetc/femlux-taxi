@@ -31,7 +31,7 @@ html[data-theme='dark'] {
   --txtSelectedLang: hsl(75, 12%, 7%);
   --txtTaxiClr: hsl(75, 11%, 21%);
 
-  --primaryTransparant25: hsla(315, 100%, 70%, 0.25);
+  --primaryTransparant25: hsla(315, 100%, 70%, 0.15);
   --primaryTransparant15: hsla(315, 100%, 70%, 0.15);
   --darkShadowTransparant15: hsla(0, 0, 0, 0.15);
 }

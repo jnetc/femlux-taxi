@@ -8,6 +8,3 @@
 .end_gradient {
   stop-color: var(--secondary);
 }
-
-@media (max-width: 960px) {
-}
