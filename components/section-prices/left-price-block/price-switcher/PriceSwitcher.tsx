@@ -36,7 +36,6 @@ export const PriceSwitcher = () => {
 
   useEffect(() => {
     const initElement = ref.current?.childNodes[0] as HTMLDivElement;
-    console.log(initElement);
     setIsCheck({
       pos: initElement.offsetLeft - MODULE_PADDING,
       size: initElement.clientWidth,
@@ -65,7 +64,7 @@ export const PriceSwitcher = () => {
     <div className={styles.module} ref={ref} role="radiogroup" onClick={select}>
       {elements}
       <span
-        className="switch"
+        className={styles.switch}
         style={{
           transform: `translate3d(${isCheck?.pos}px, 0 ,0)`,
           width: `${isCheck?.size}px`,

@@ -17,25 +17,26 @@ html[data-theme='light'] {
   --bg: hsl(0, 0%, 96%);
   --txtPrimaryClr: hsl(75, 12%, 7%);
   --txtSecondaryClr: hsl(0, 0%, 32%);
-  --txtSelectedLang: hsl(75, 12%, 7%);
+  --txtSelectedClr: hsl(75, 12%, 7%);
   --txtTaxiClr: hsl(0, 9%, 94%);
   --priceSwitcherBg: hsl(0, 0%, 100%);
 
   --primaryTransparant25: hsla(315, 100%, 70%, 0.25);
   --primaryTransparant15: hsla(315, 100%, 70%, 0.15);
-  --darkShadowTransparant15: hsla(0, 0, 0, 0.15);
+  --darkShadowTransparant25: hsla(0, 0%, 0%, 0.15);
+  --darkShadowTransparant15: hsla(0, 0%, 0%, 0.05);
 }
 html[data-theme='dark'] {
   --bg: hsl(76, 13%, 17%);
   --txtPrimaryClr: hsl(0, 0%, 96%);
   --txtSecondaryClr: hsl(0, 0%, 75%);
-  --txtSelectedLang: hsl(75, 12%, 7%);
+  --txtSelectedClr: hsl(75, 12%, 7%);
   --txtTaxiClr: hsl(75, 11%, 21%);
-  --priceSwitcherBg: hsl(100, 100%, 0%);
+  --priceSwitcherBg: hsl(75, 10%, 21%);
 
   --primaryTransparant25: hsla(315, 100%, 70%, 0.1);
   --primaryTransparant15: hsla(315, 100%, 70%, 0.05);
-  --darkShadowTransparant15: hsla(0, 0, 0, 0.15);
+  --darkShadowTransparant15: hsla(0, 0%, 0%, 0.15);
 }
 *,
 ::after,

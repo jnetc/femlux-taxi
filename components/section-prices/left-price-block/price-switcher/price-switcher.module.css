@@ -4,6 +4,8 @@
   align-items: center;
   column-gap: 2rem;
   position: relative;
+  /* overflow: hidden; */
+  margin-block: 2rem;
   padding: 3px;
   border-radius: 50px;
   background-color: var(--priceSwitcherBg);
@@ -11,30 +13,32 @@
   white-space: nowrap;
   box-shadow: 0 10px 20px var(--primaryTransparant25),
     0 25px 50px var(--primaryTransparant15);
-  overflow: hidden;
   user-select: none;
 }
 
 .button {
+  padding: 0.5rem 1.5rem;
   background-color: transparent;
   border-radius: inherit;
-  color: var(--txtPrimaryClr);
+  color: var(--txtSecondaryClr);
   font-size: 1.3em;
   font-weight: bold;
-  padding: 0.5rem 1.5rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s cubic-bezier(0, 1.02, 0.3, 1);
   cursor: pointer;
   z-index: 2;
 }
+.button[aria-checked='true'] {
+  color: var(--txtSelectedClr);
+}
 
-.module :global(.switch) {
+.switch {
   height: calc(100% - 6px);
   position: absolute;
+  opacity: 1;
   background-color: var(--primary);
   border-radius: inherit;
+  transition: all 0.3s cubic-bezier(0, 1.02, 0.3, 1);
   user-select: none;
   pointer-events: none;
-  opacity: 1;
   z-index: 1;
-  transition: all 0.3s ease-in-out;
 }

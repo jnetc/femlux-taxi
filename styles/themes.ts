@@ -13,7 +13,7 @@ declare module 'styled-components' {
       primaryTransparant15: string;
       darkShadowTransparant15: string;
 
-      txtSelectedLang: string;
+      txtSelectedClr: string;
       borderClr: string;
       cardShadow: string;
     };
@@ -29,7 +29,7 @@ const themes = {
       secondary: 'hsl(251, 35%, 56%)',
       txtPrimaryClr: 'hsl(75, 12%, 7%)',
       txtSecondaryClr: 'hsl(0, 0%, 32%)',
-      txtSelectedLang: 'hsl(75, 12%, 7%)',
+      txtSelectedClr: 'hsl(75, 12%, 7%)',
       txtTaxiClr: 'hsl(0, 9%, 94%)',
 
       primaryTransparant25: 'hsla(315, 100%, 70%, .25)',
@@ -49,7 +49,7 @@ const themes = {
       secondary: 'hsl(251, 35%, 56%)',
       txtPrimaryClr: 'hsl(0, 0%, 96%)',
       txtSecondaryClr: 'hsl(0, 0%, 75%)',
-      txtSelectedLang: 'hsl(75, 12%, 7%)',
+      txtSelectedClr: 'hsl(75, 12%, 7%)',
       txtTaxiClr: 'hsl(75, 11%, 21%)',
 
       primaryTransparant25: 'hsla(315, 100%, 70%, .25)',
