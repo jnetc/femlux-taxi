@@ -13,6 +13,7 @@
     0 25px 50px var(--primaryTransparant15);
   transition: all 0.3s ease-in-out;
   overflow: hidden;
+  user-select: none;
 }
 .btn_name {
   display: inline-block;

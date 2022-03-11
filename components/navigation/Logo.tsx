@@ -8,7 +8,7 @@ export const Logo = () => {
   const { language } = useLanguageState();
   return (
     <Link href={`/${language === 'fi' ? '' : language}`}>
-      <a>
+      <a title="logo" aria-label="logo">
         <svg viewBox="0 0 110 42" className={styles.module}>
           <path
             d="M11.1437 34.2565H3.91709V41.6644H0.142944V23.4659H12.0444V26.5062H3.91709V31.2163H11.1437V34.2565Z"

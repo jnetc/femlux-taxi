@@ -2,6 +2,7 @@
   width: var(--lang-button-height-width);
   height: var(--lang-button-height-width);
   position: relative;
+  user-select: none;
 }
 
 .module.show_menu button:nth-of-type(2) {

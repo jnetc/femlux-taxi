@@ -1,7 +1,7 @@
 import styles from './home-index.module.css';
 import { ActionBlock } from './action-buttons/ActionBlock';
 // Components
-import { Title } from '@Components/title/Title';
+import { TitleH1 } from '@Components/titles/TitleH1';
 import { Description } from '@Components/description/Description';
 import { FrontCarMob } from './front-car/FrontCarMob';
 import { FrontCar } from './front-car/FrontCar';
@@ -14,11 +14,11 @@ const Main = () => {
     <section className={styles.module}>
       <div className={styles.left_block}>
         <span className={styles.taxi_text}>TAXI</span>
-        <Title>{title[language]}</Title>
+        <TitleH1 homeTitle>{title[language]}</TitleH1>
         <div className={styles.insert_block}>
           <FrontCarMob />
         </div>
-        <Description>
+        <Description homeTitle>
           Если желаете во время, с комфортом и с хорошим настроением добраться
           до места назначения - звоните и заказывайте!
         </Description>

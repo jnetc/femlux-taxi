@@ -1,0 +1,9 @@
+.module {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.header {
+  row-gap: 1rem;
+  margin-block-end: 7rem;
+}

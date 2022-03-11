@@ -1,0 +1,65 @@
+.module {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 32px;
+  position: relative;
+  padding: 3px;
+  border-radius: 50px;
+  background-color: var(--priceSwitcherBg);
+  border: 2px solid var(--primary);
+  white-space: nowrap;
+  box-shadow: 0 10px 20px var(--primaryTransparant25),
+    0 25px 50px var(--primaryTransparant15);
+  overflow: hidden;
+  user-select: none;
+}
+
+.module :global(#workdays),
+.module :global(#weekend),
+.module :global(#holydays) {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  user-select: none;
+}
+
+.button {
+  background-color: transparent;
+  border-radius: inherit;
+  color: var(--txtPrimaryClr);
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 8px 24px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid transparent;
+  z-index: 2;
+}
+/* .button[aria-checked='true'] {
+  background-color: var(--primary);
+} */
+
+.wrapper {
+  border-radius: 50px;
+  padding-block: 8px;
+}
+
+.module :global(#workdays):checked + .button,
+.module :global(#weekend):checked + .button,
+.module :global(#holydays):checked + .button {
+  background-color: var(--primary);
+}
+
+.module :global(.switch) {
+  width: 150px;
+  height: calc(100% - 8px);
+  position: absolute;
+  background-color: var(--primary);
+  border-radius: inherit;
+  user-select: none;
+  pointer-events: none;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}

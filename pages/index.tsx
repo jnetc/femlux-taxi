@@ -1,5 +1,7 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
+
 // import { request, query } from 'lib/datocms';
 
 // Context
@@ -8,9 +10,19 @@ import Head from 'next/head';
 import { LanguageState, useLanguageState } from '@Hooks/useLanguageState';
 import { useLangSwitcher } from '@Hooks/useLangSwitcher';
 // Components
+import { extraCSS } from '@Helpers/critical';
 import Navigation from '@Components/navigation';
 import SectionHome from '@Components/section-home';
-import { extraCSS } from '@Helpers/critical';
+// Dynamic imports
+const Prices = dynamic(() => import('@Components/section-prices'), {
+  ssr: false,
+});
+const Services = dynamic(() => import('@Components/section-services'), {
+  ssr: false,
+});
+const About = dynamic(() => import('@Components/section-about'), {
+  ssr: false,
+});
 
 // interface Intro<T> {
 //   title: T;
@@ -50,6 +62,9 @@ const Home: NextPage = ({
       <Navigation />
       <main>
         <SectionHome />
+        <Prices />
+        <Services />
+        <About />
       </main>
       <footer>Footer</footer>
     </LanguageState.Provider>
