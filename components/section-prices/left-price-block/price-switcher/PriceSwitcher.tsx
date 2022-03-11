@@ -21,10 +21,10 @@ export const PriceSwitcher = () => {
       const element = el as HTMLDivElement;
       const getDataAttr = Number(element.getAttribute('data-index'));
       if (selectedDataIndex !== getDataAttr) {
-        // element.setAttribute('aria-checked', 'false');
+        element.setAttribute('aria-checked', 'false');
         return;
       }
-      // element.setAttribute('aria-checked', 'true');
+      element.setAttribute('aria-checked', 'true');
 
       setIsCheck({
         pos: element.offsetLeft - 1.5,
