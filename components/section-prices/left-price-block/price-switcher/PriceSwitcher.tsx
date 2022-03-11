@@ -7,6 +7,7 @@ export const PriceSwitcher = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [isCheck, setIsCheck] = useState<{ pos: number; size: number }>();
   const labelArray = Object.entries(labels);
+  const MODULE_PADDING = 3;
 
   const select = useCallback((event: MouseEvent<HTMLDivElement>) => {
     const trackElements = [event.currentTarget.childNodes][0];
@@ -27,7 +28,7 @@ export const PriceSwitcher = () => {
       element.setAttribute('aria-checked', 'true');
 
       setIsCheck({
-        pos: element.offsetLeft - 1.5,
+        pos: element.offsetLeft - MODULE_PADDING,
         size: element.clientWidth,
       });
     });
@@ -37,7 +38,7 @@ export const PriceSwitcher = () => {
     const initElement = ref.current?.childNodes[0] as HTMLDivElement;
     console.log(initElement);
     setIsCheck({
-      pos: initElement.offsetLeft - 1.5,
+      pos: initElement.offsetLeft - MODULE_PADDING,
       size: initElement.clientWidth,
     });
   }, [language]);
