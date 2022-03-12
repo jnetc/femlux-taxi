@@ -19,8 +19,10 @@ export const PriceTime = ({
     </div>
   ) : (
     <div className={`${styles.module} ${styles.one_price}`}>
-      <Time time={priceArr[0].time} isLargePrice />
-      <Price price={priceArr[0].price} isLargePrice />
+      <div className={styles.full_block}>
+        <Time time={priceArr[0].time} isLargePrice />
+        <Price price={priceArr[0].price} isLargePrice />
+      </div>
     </div>
   );
 };

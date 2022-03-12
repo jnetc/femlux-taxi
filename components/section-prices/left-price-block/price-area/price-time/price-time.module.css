@@ -8,12 +8,20 @@
 }
 .two_prices {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 3rem;
+  /* justify-content: space-between; */
 }
 
 .two_prices .half_block {
-  width: 45%;
+  width: min-content;
+  /* width: 45%; */
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+}
+.one_price .full_block {
+  margin-inline: auto;
+  /* width: min-content; */
+  /* display: flex; */
 }
