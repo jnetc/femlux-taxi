@@ -9,8 +9,7 @@
   margin-block-end: 7rem;
 }
 .price_content {
-  width: max-content;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(320px, 550px) 100px minmax(320px, 550px);
   column-gap: 5rem;
 }

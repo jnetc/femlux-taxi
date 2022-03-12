@@ -6,7 +6,11 @@ export const TitleH2: FC<{ homeTitle?: boolean }> = ({
   homeTitle,
 }) => {
   return (
-    <h1 className={`${homeTitle ? styles.home_title : styles.module}`}>
+    <h1
+      className={`${
+        homeTitle ? styles.home_title : styles.module
+      } align-center`}
+    >
       {children}
     </h1>
   );

@@ -1,11 +1,11 @@
 import { useContext, createContext } from 'react';
 import { ThemesType } from '@Types';
 
-type State = {
-  theme: ThemesType;
-  switchTheme: (value: ThemesType) => void;
+type State<T> = {
+  theme: T;
+  switchTheme: (value: T) => void;
 };
-const state: State = {
+const state: State<ThemesType> = {
   theme: 'dark',
   switchTheme: value => value,
 };

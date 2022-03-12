@@ -1,0 +1,19 @@
+.module {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.one_price {
+  width: 100%;
+}
+.two_prices {
+  display: flex;
+  justify-content: space-between;
+}
+
+.two_prices .half_block {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}

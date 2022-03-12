@@ -6,6 +6,8 @@
 :root {
   --primary: hsl(315, 100%, 70%);
   --secondary: hsl(251, 35%, 56%);
+  --primary-value: 315 100% 70%;
+  --secondary-value: 251 35% 56%;
 
   --gradient: linear-gradient(to right, var(--primary), var(--secondary));
 
@@ -25,6 +27,8 @@ html[data-theme='light'] {
   --primaryTransparant15: hsla(315, 100%, 70%, 0.15);
   --darkShadowTransparant25: hsla(0, 0%, 0%, 0.15);
   --darkShadowTransparant15: hsla(0, 0%, 0%, 0.05);
+  --price-stretch-primary: hsla(var(--primary-value) / 0.3);
+  --price-stretch-secondary: hsla(var(--secondary-value) / 0.3);
 }
 html[data-theme='dark'] {
   --bg: hsl(76, 13%, 17%);
@@ -37,6 +41,8 @@ html[data-theme='dark'] {
   --primaryTransparant25: hsla(315, 100%, 70%, 0.1);
   --primaryTransparant15: hsla(315, 100%, 70%, 0.05);
   --darkShadowTransparant15: hsla(0, 0%, 0%, 0.15);
+  --price-stretch-primary: hsla(var(--primary-value) / 0.5);
+  --price-stretch-secondary: hsla(var(--secondary-value) / 0.5);
 }
 *,
 ::after,
@@ -72,7 +78,8 @@ p,
 span,
 button,
 label,
-div {
+div,
+time {
   font-family: 'Roboto';
 }
 
@@ -117,6 +124,9 @@ span {
   color: var(--txtSecondaryClr);
   font-size: 1.125em;
   line-height: 1.4;
+}
+.align-center {
+  margin-inline: auto;
 }
 main {
   width: 100%;

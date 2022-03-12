@@ -1,11 +1,11 @@
 .module {
+  width: max-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
   column-gap: 2rem;
   position: relative;
-  /* overflow: hidden; */
-  margin-block: 2rem;
+  margin: 2rem auto;
   padding: 3px;
   border-radius: 50px;
   background-color: var(--priceSwitcherBg);

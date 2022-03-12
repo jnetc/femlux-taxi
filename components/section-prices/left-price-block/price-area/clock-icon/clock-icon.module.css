@@ -1,0 +1,9 @@
+.module {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: transparent;
+}
+.module path {
+  stroke: var(--txtSecondaryClr);
+  stroke-width: 3;
+}

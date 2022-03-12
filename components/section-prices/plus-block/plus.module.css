@@ -1,0 +1,6 @@
+.module {
+  grid-column: 2;
+  min-width: 100px;
+  height: 100px;
+  background-color: var(--primary);
+}

@@ -1,0 +1,6 @@
+.module {
+  width: 300%;
+  display: flex;
+  transition: all 0.3s cubic-bezier(0, 1.02, 0.3, 1);
+  transform: translateX(0%); /* -33.33%, -66.66% */
+}
