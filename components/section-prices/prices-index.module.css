@@ -9,7 +9,20 @@
   margin-block-end: 7rem;
 }
 .price_content {
+  width: 100%;
   display: grid;
-  grid-template-columns: minmax(320px, 550px) 100px minmax(320px, 550px);
-  column-gap: 5rem;
+  grid-template-columns: minmax(350px, 550px) minmax(30px, 100px) minmax(
+      250px,
+      450px
+    );
+  column-gap: 3rem;
+}
+
+@media (max-width: 960px) {
+  .price_content {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 80px 1fr;
+    column-gap: 0;
+    row-gap: 3rem;
+  }
 }

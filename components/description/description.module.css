@@ -13,5 +13,6 @@
 @media (max-width: 960px) {
   .module {
     font-size: clamp(1.175em, 3vw, 1.5em);
+    text-align: left;
   }
 }

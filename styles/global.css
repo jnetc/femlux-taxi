@@ -127,9 +127,13 @@ span {
 }
 .align-center {
   margin-inline: auto;
+  text-align: center;
 }
 main {
   width: 100%;
+  display: flex;
+  flex-flow: column;
+  row-gap: 5rem;
   margin-inline: auto;
 }
 header.section-header {
@@ -137,11 +141,15 @@ header.section-header {
   flex-flow: column;
   align-items: center;
 }
+
 @media (max-width: 960px) {
   body {
     padding: 1rem 1rem;
   }
   main {
     margin-block-start: 5rem;
+  }
+  header.section-header {
+    align-items: flex-start;
   }
 }

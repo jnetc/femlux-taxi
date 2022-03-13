@@ -9,6 +9,7 @@
 }
 .module {
   font-size: clamp(1.5em, 4vw, 4em);
+  text-align: center;
 }
 .home_title {
   font-size: clamp(3em, 5vw, 6em);
@@ -17,6 +18,7 @@
 @media (max-width: 960px) {
   .module {
     font-size: clamp(2em, 10vw, 4em);
+    text-align: left;
   }
   .home_title {
     font-size: clamp(2.5em, 10vw, 5em);

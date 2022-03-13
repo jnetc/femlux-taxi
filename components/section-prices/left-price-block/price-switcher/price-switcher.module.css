@@ -1,9 +1,8 @@
 .module {
   width: max-content;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  column-gap: 2rem;
+  column-gap: 1rem;
   position: relative;
   margin: 2rem auto;
   padding: 3px;
@@ -21,12 +20,13 @@
   background-color: transparent;
   border-radius: inherit;
   color: var(--txtSecondaryClr);
-  font-size: 1.3em;
+  font-size: clamp(0.8em, 1.5vw, 1.3em);
   font-weight: bold;
   transition: all 0.3s cubic-bezier(0, 1.02, 0.3, 1);
   cursor: pointer;
   z-index: 2;
 }
+
 .button[aria-checked='true'] {
   color: var(--txtSelectedClr);
 }
@@ -41,4 +41,10 @@
   user-select: none;
   pointer-events: none;
   z-index: 1;
+}
+
+@media (max-width: 960px) {
+  .button {
+    padding: 0.5rem 0.8rem;
+  }
 }

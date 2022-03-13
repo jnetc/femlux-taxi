@@ -3,10 +3,12 @@ import styles from './price-switcher.module.css';
 // Hook
 import { usePriceSwitch } from '@Hooks/usePriceSwitch';
 import { useLanguageState } from '@Hooks/useLanguageState';
+import { useWindowSize } from '@Hooks/useWindowSize';
 
 export const PriceSwitcher = () => {
   const { language } = useLanguageState();
   const { select, setSelect } = usePriceSwitch();
+  const { width } = useWindowSize();
   const ref = useRef<HTMLDivElement>(null);
   const [isCheck, setIsCheck] = useState<{ pos: number; size: number }>();
   const labelArray = Object.entries(labels);
@@ -42,13 +44,22 @@ export const PriceSwitcher = () => {
   );
 
   useEffect(() => {
-    const initElement = ref.current?.childNodes[0] as HTMLDivElement;
-    setIsCheck({
-      pos: initElement.offsetLeft - MODULE_PADDING,
-      size: initElement.clientWidth,
+    const trackElement = ref.current as HTMLDivElement;
+    const radioButtons = [trackElement.childNodes][0];
+    radioButtons.forEach(el => {
+      if (el.nodeName !== 'DIV') return;
+      const div = el as HTMLDivElement;
+      if (div.getAttribute('aria-checked') === 'false') return;
+
+      const dataIndex = Number(div.getAttribute('data-index'));
+
+      setSelect(dataIndex);
+      setIsCheck({
+        pos: div.offsetLeft - MODULE_PADDING,
+        size: div.clientWidth,
+      });
     });
-    setSelect(0);
-  }, [language, setSelect]);
+  }, [setSelect, language, width]);
 
   const elements = labelArray.map((label, index) => {
     const idKey = Object.values(label)[0] as string;

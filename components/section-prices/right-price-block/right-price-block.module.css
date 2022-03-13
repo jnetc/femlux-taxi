@@ -5,3 +5,9 @@
   flex-flow: column;
   align-items: center;
 }
+@media (max-width: 960px) {
+  .module {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}

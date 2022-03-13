@@ -1,6 +1,6 @@
 .module {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: clamp(1.1rem, 2vw, 1.5rem);
+  height: clamp(1.1rem, 2vw, 1.5rem);
   fill: transparent;
 }
 .module path {

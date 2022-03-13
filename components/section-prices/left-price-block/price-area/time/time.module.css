@@ -1,11 +1,10 @@
 .module {
   height: fit-content;
   display: flex;
-  /* align-items: center; */
-  column-gap: 1rem;
-  /* flex: 1 0 50%; */
-  font-size: 1.5rem;
+  align-items: center;
+  column-gap: 0.5rem;
   color: var(--txtSecondaryClr);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
 }
 .module time {
   white-space: nowrap;
