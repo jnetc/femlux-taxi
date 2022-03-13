@@ -10,18 +10,24 @@
   display: flex;
   justify-content: center;
   column-gap: 3rem;
-  /* justify-content: space-between; */
 }
-
+.one_price,
+.two_prices {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+}
 .two_prices .half_block {
   width: min-content;
-  /* width: 45%; */
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
 }
 .one_price .full_block {
   margin-inline: auto;
-  /* width: min-content; */
-  /* display: flex; */
+}
+
+.show_price {
+  opacity: 1;
+  transform: scale(1);
 }

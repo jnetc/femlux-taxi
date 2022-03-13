@@ -39,6 +39,7 @@
 
 @media (max-width: 960px) {
   .module {
+    height: 100%;
     align-items: flex-start;
   }
   .right_block {

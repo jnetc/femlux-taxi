@@ -2,7 +2,6 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin-block-end: 5rem;
 }
 .header {
   row-gap: 1rem;
@@ -16,6 +15,7 @@
       450px
     );
   column-gap: 3rem;
+  justify-content: center;
 }
 
 @media (max-width: 960px) {

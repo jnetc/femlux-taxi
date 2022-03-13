@@ -10,11 +10,11 @@ export const TransitionArea = () => {
 
   const definePosition = STEP * select;
 
-  const content = price.map(l => {
+  const content = price.map((l, index) => {
     const key = Object.keys(l)[0];
     const values = Object.values(l)[0];
 
-    return <PriceTime key={key} priceArr={values} />;
+    return <PriceTime key={key} priceArr={values} index={index} />;
   });
   return (
     <div

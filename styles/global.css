@@ -133,7 +133,7 @@ main {
   width: 100%;
   display: flex;
   flex-flow: column;
-  row-gap: 5rem;
+  row-gap: 10rem;
   margin-inline: auto;
 }
 header.section-header {

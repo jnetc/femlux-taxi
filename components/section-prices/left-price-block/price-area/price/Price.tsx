@@ -1,10 +1,8 @@
+import { FC } from 'react';
 import styles from './price.module.css';
-export const Price = ({
-  price,
+export const Price: FC<{ isLargePrice?: boolean }> = ({
+  children,
   isLargePrice = false,
-}: {
-  price: string;
-  isLargePrice?: boolean;
 }) => {
   return (
     <p
@@ -12,7 +10,7 @@ export const Price = ({
         isLargePrice ? styles.large : styles.small
       }`}
     >
-      {price} €
+      {children} €
     </p>
   );
 };

@@ -1,11 +1,9 @@
+import { FC } from 'react';
 import styles from './time.module.css';
 import { ClockIcon } from '../clock-icon/ClockIcon';
-export const Time = ({
-  time,
+export const Time: FC<{ isLargePrice?: boolean }> = ({
+  children,
   isLargePrice = false,
-}: {
-  time: string;
-  isLargePrice?: boolean;
 }) => {
   return (
     <div
@@ -14,7 +12,7 @@ export const Time = ({
       }`}
     >
       <ClockIcon />
-      <time className={styles.time}>{time}</time>
+      <time className={styles.time}>{children}</time>
     </div>
   );
 };
