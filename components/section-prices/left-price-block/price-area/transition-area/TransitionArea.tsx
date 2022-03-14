@@ -15,8 +15,6 @@ export const TransitionArea = () => {
     data?.price.holidays,
   ];
 
-  console.log(prices);
-
   const definePosition = STEP * select;
 
   const content = prices.map((l, index) => {

@@ -9,13 +9,10 @@ import { ServiceCard } from './service-card/ServiceCard';
 const Services = () => {
   const { data } = useLanguageState();
 
-  console.log('data', data?.service.service);
-
   const serviceCards = data?.service.service.map(card => {
-    console.log(card);
-
     return <ServiceCard key={card.iconName} data={card} />;
   });
+
   return (
     <section className={styles.module}>
       <header className={`${styles.header} section-header`}>
