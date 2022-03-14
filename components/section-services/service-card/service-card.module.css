@@ -1,0 +1,19 @@
+.module {
+  max-width: 560px;
+  display: flex;
+  flex-flow: column;
+  row-gap: 1rem;
+  padding: 6rem 3.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px var(--dark-shadow-transparant-15),
+    0 60px 60px var(--dark-shadow-transparant-15);
+  transition: all 0.3s ease-in-out;
+}
+.icon_container {
+  position: relative;
+}
+@media (max-width: 480px) {
+  .module {
+    padding: 5rem 1.5rem;
+  }
+}

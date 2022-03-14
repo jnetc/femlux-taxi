@@ -9,15 +9,12 @@ import { Plus } from './plus-block/Plus';
 import { useLanguageState } from '@Hooks/useLanguageState';
 
 const Prices = () => {
-  const { language } = useLanguageState();
+  const { data } = useLanguageState();
   return (
     <section className={styles.module}>
       <header className={`${styles.header} section-header`}>
-        <TitleH1>{prices[language]}</TitleH1>
-        <Description>
-          Если желаете во время, с комфортом и с хорошим настроением добраться
-          до места назначения - звоните и заказывайте!
-        </Description>
+        <TitleH1>{data?.price.title}</TitleH1>
+        <Description>{data?.price.description}</Description>
       </header>
       <div className={styles.price_content}>
         <LeftPriceBlock />
@@ -28,9 +25,3 @@ const Prices = () => {
   );
 };
 export default Prices;
-
-const prices = {
-  en: 'taxi fare',
-  ru: 'стоимость проезда на такси',
-  fi: 'taksin hinta',
-};

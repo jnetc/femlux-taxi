@@ -34,16 +34,50 @@ export function request({
 }
 
 export const query = gql`
-  query allValue($locale: SiteLocale) {
-    nav(locale: $locale) {
-      navigation {
-        link
+  query MyQuery($locale: SiteLocale) {
+    home(locale: $locale) {
+      title
+      description
+      mainTelephoneNum
+      mainButtonName
+    }
+    price(locale: $locale) {
+      title
+      description
+      priceLand
+      priceLandDesc
+      switcherName
+      holidays {
+        label
+        price
+      }
+      weekend {
+        price
+        label
+      }
+      workdays {
+        price
+        label
+      }
+      priceTrip
+      priceTripDesc
+      priceByKm {
+        price
+        label
+      }
+      priceByTime {
+        price
+        label
       }
     }
-    intro(locale: $locale) {
+    service(locale: $locale) {
       title
-      subtitle
-      id
+      description
+      service {
+        title
+        description
+        iconName
+      }
     }
   }
 `;

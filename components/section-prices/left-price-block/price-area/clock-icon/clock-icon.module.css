@@ -4,6 +4,6 @@
   fill: transparent;
 }
 .module path {
-  stroke: var(--txtSecondaryClr);
+  stroke: var(--txt-secondary-clr);
   stroke-width: 3;
 }

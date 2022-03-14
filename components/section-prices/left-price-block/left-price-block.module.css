@@ -3,6 +3,7 @@
   width: 100%;
   display: flex;
   flex-flow: column;
+  row-gap: 0.5rem;
 }
 .wrapper {
   overflow: hidden;

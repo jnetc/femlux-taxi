@@ -7,11 +7,11 @@
   margin: 2rem auto;
   padding: 3px;
   border-radius: 50px;
-  background-color: var(--priceSwitcherBg);
+  background-color: var(--price-switcher-bg);
   border: 2px solid var(--primary);
   white-space: nowrap;
-  box-shadow: 0 10px 20px var(--primaryTransparant25),
-    0 25px 50px var(--primaryTransparant15);
+  box-shadow: 0 10px 20px var(--primary-transparant-25),
+    0 25px 50px var(--primary-transparant-15);
   user-select: none;
 }
 
@@ -19,7 +19,7 @@
   padding: 0.5rem 1.5rem;
   background-color: transparent;
   border-radius: inherit;
-  color: var(--txtSecondaryClr);
+  color: var(--txt-secondary-clr);
   font-size: clamp(0.8em, 1.5vw, 1.3em);
   font-weight: bold;
   transition: all 0.3s cubic-bezier(0, 1.02, 0.3, 1);
@@ -28,7 +28,7 @@
 }
 
 .button[aria-checked='true'] {
-  color: var(--txtSelectedClr);
+  color: var(--txt-selected-clr);
 }
 
 .switch {

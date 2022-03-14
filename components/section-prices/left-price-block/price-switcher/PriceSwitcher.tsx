@@ -6,12 +6,14 @@ import { useLanguageState } from '@Hooks/useLanguageState';
 import { useWindowSize } from '@Hooks/useWindowSize';
 
 export const PriceSwitcher = () => {
-  const { language } = useLanguageState();
+  const { language, data } = useLanguageState();
   const { select, setSelect } = usePriceSwitch();
   const { width } = useWindowSize();
-  const ref = useRef<HTMLDivElement>(null);
+
   const [isCheck, setIsCheck] = useState<{ pos: number; size: number }>();
-  const labelArray = Object.entries(labels);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const labelArray = data?.price.switcherName.split(',') as Array<string>;
   const MODULE_PADDING = 3;
 
   const selectRadioBUtton = useCallback(
@@ -61,20 +63,19 @@ export const PriceSwitcher = () => {
     });
   }, [setSelect, language, width]);
 
-  const elements = labelArray.map((label, index) => {
-    const idKey = Object.values(label)[0] as string;
-    const idValue = Object.values(label)[1] as LangTypeLOcal;
+  console.log();
 
+  const elements = labelArray.map((label, index) => {
     return (
       <div
-        key={`${idKey}`}
+        key={`${label}`}
         role="radio"
         aria-checked={index === select}
         className={styles.button}
         data-index={index}
         tabIndex={0}
       >
-        {idValue[language]}
+        {label}
       </div>
     );
   });
@@ -96,24 +97,4 @@ export const PriceSwitcher = () => {
       />
     </div>
   );
-};
-
-type LangTypeLOcal = typeof labels.holydays;
-
-const labels = {
-  workdays: {
-    en: 'work days',
-    ru: 'рабочие дни',
-    fi: 'työpäivät',
-  },
-  weekend: {
-    en: 'weekend',
-    ru: 'выходные',
-    fi: 'viikonloppu',
-  },
-  holydays: {
-    en: 'holydays',
-    ru: 'праздники',
-    fi: 'pyhänä',
-  },
 };

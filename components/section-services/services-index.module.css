@@ -7,3 +7,15 @@
   row-gap: 1rem;
   margin-block-end: 7rem;
 }
+.services_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+@media (max-width: 960px) {
+  .services_content {
+    flex-flow: column;
+  }
+}

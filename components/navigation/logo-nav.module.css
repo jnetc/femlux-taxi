@@ -8,7 +8,7 @@
   fill: var(--primary);
 }
 .white_to_black {
-  fill: var(--txtPrimaryClr);
+  fill: var(--txt-primary-clr);
 }
 .black_to_white {
   fill: var(--bg);

@@ -1,0 +1,12 @@
+.module {
+  width: 200px;
+  height: 136px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.module path {
+  fill: var(--service-icons);
+}

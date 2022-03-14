@@ -4,11 +4,13 @@ import { Price } from '../price/Price';
 // Hook
 import { usePriceSwitch } from '@Hooks/usePriceSwitch';
 
+import { PriceTimeType } from '@Types';
+
 export const PriceTime = ({
   priceArr,
   index,
 }: {
-  priceArr: Array<{ price: string; time: string }>;
+  priceArr: Array<PriceTimeType<string>>;
   index: number;
 }) => {
   const { select } = usePriceSwitch();
@@ -21,11 +23,11 @@ export const PriceTime = ({
       data-index={index}
     >
       <div className={styles.half_block}>
-        <Time>{priceArr[0].time}</Time>
+        <Time>{priceArr[0].label}</Time>
         <Price>{priceArr[0].price}</Price>
       </div>
       <div className={styles.half_block}>
-        <Time>{priceArr[1].time}</Time>
+        <Time>{priceArr[1].label}</Time>
         <Price>{priceArr[1].price}</Price>
       </div>
     </div>
@@ -37,7 +39,7 @@ export const PriceTime = ({
       data-index={index}
     >
       <div className={styles.full_block}>
-        <Time isLargePrice>{priceArr[0].time}</Time>
+        <Time isLargePrice>{priceArr[0].label}</Time>
         <Price isLargePrice>{priceArr[0].price}</Price>
       </div>
     </div>

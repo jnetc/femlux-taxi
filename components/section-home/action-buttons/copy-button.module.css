@@ -13,7 +13,7 @@
   left: 50%;
   padding: 0.3rem 0.5rem;
   opacity: 0;
-  background-color: var(--txtPrimaryClr);
+  background-color: var(--txt-primary-clr);
   border-radius: 5px;
   color: var(--bg);
   letter-spacing: 0.5px;

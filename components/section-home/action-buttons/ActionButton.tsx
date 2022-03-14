@@ -5,19 +5,13 @@ import styles from './action-button.module.css';
 import { useLanguageState } from '@Hooks/useLanguageState';
 
 export const ActionButton = () => {
-  const { language } = useLanguageState();
+  const { data } = useLanguageState();
   return (
-    <Link href={`tel:${+358054645221}`} passHref>
+    <Link href={`tel:${data?.home.mainTelephoneNum}`} passHref>
       <a className={styles.module}>
         <ActionIcon />
-        <span className={styles.btn_name}>{buttonName[language]}</span>
+        <span className={styles.btn_name}>{data?.home.mainButtonName}</span>
       </a>
     </Link>
   );
-};
-
-const buttonName = {
-  en: 'order a taxi',
-  fi: 'tilaa taksin',
-  ru: 'закажи такси',
 };

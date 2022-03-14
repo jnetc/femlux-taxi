@@ -1,0 +1,16 @@
+.module {
+  width: 270px;
+  height: 260px;
+  margin-inline: auto;
+}
+.module path {
+  fill: var(--primary);
+}
+.module path:nth-of-type(1) {
+  /* opacity: .35; */
+  fill-opacity: 0.35;
+}
+.module path {
+  /* opacity: .45; */
+  fill-opacity: 0.45;
+}

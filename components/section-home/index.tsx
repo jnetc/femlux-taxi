@@ -9,19 +9,16 @@ import { FrontCar } from './front-car/FrontCar';
 import { useLanguageState } from '@Hooks/useLanguageState';
 
 const Main = () => {
-  const { language } = useLanguageState();
+  const { data } = useLanguageState();
   return (
     <section className={styles.module}>
       <div className={styles.left_block}>
         <span className={styles.taxi_text}>TAXI</span>
-        <TitleH1 homeTitle>{title[language]}</TitleH1>
+        <TitleH1 homeTitle>{data?.home.title}</TitleH1>
         <div className={styles.insert_block}>
           <FrontCarMob />
         </div>
-        <Description homeTitle>
-          Если желаете во время, с комфортом и с хорошим настроением добраться
-          до места назначения - звоните и заказывайте!
-        </Description>
+        <Description homeTitle>{data?.home.description}</Description>
         <ActionBlock />
       </div>
       <div className={styles.right_block}>
@@ -32,9 +29,3 @@ const Main = () => {
 };
 
 export default Main;
-
-const title = {
-  en: 'Fast Reliably Safely!',
-  ru: 'Быстро Надежно Безопасно!',
-  fi: 'Nopeasti Luotettavasti Turvallisesti!',
-};

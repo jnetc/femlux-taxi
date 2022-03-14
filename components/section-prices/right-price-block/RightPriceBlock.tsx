@@ -5,24 +5,17 @@ import { Fare } from './fare/Fare';
 import { useLanguageState } from '@Hooks/useLanguageState';
 
 export const RightPriceBlock = () => {
-  const { language } = useLanguageState();
+  const { data } = useLanguageState();
   return (
     <div className={styles.module}>
-      <TitleH2>Стоимость поездки</TitleH2>
-      <p className="paragraph">Пассажиров 1-4 человека</p>
-      <Fare label={labelTime[language]}>0,90 €</Fare>
-      <Fare label={labelKM[language]}>0,90 €</Fare>
+      <TitleH2>{data?.price.priceTrip}</TitleH2>
+      <p className="paragraph">{data?.price.priceTripDesc}</p>
+      <Fare label={data?.price.priceByTime[0].label}>
+        {data?.price.priceByTime[0].price} €
+      </Fare>
+      <Fare label={data?.price.priceByKm[0].label}>
+        {data?.price.priceByKm[0].price} €
+      </Fare>
     </div>
   );
-};
-
-const labelTime = {
-  en: 'By time',
-  fi: 'Ajan kanssa',
-  ru: 'По времени',
-};
-const labelKM = {
-  en: 'Mileage',
-  fi: 'Kilometrimäärä',
-  ru: 'Километраж',
 };

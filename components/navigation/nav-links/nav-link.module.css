@@ -1,5 +1,5 @@
 .module {
-  color: var(--txtPrimaryClr);
+  color: var(--txt-primary-clr);
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 0.5px;

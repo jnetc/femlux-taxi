@@ -30,7 +30,7 @@
   position: absolute;
   top: -70%;
   left: -150px;
-  color: var(--txtTaxiClr);
+  color: var(--txt-taxi-clr);
   font-size: clamp(30em, 45vw, 50em);
   font-weight: bold;
   transition: color 0.3s ease-in-out;

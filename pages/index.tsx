@@ -2,7 +2,7 @@ import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-// import { request, query } from 'lib/datocms';
+import { request, query } from 'lib/datocms';
 
 // Context
 // import { ContentStore } from '@Store/contentStore';
@@ -24,24 +24,17 @@ const About = dynamic(() => import('@Components/section-about'), {
   ssr: false,
 });
 
-// interface Intro<T> {
-//   title: T;
-//   subtitle: T;
-//   id: T;
-// }
-interface Navigation<T> {
-  navigation: Array<{ link: T }>;
-}
-// interface Data {
-//   intro: Intro<string>;
-//   nav: Navigation<string>;
-// }
-
 const Home: NextPage = ({
+  data,
   lang,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { switchLang, languages, switchLanguages } = useLanguageState();
   const [langs] = useLangSwitcher(lang, languages);
+
+  if (!data) {
+    return <main>Sorry! This page not found.</main>;
+  }
+  console.log('data', data);
 
   return (
     <LanguageState.Provider
@@ -50,6 +43,7 @@ const Home: NextPage = ({
         languages: langs,
         switchLang,
         switchLanguages,
+        data: data,
       }}
     >
       <Head>
@@ -74,11 +68,7 @@ const Home: NextPage = ({
 export default Home;
 
 export const getStaticProps: GetStaticProps = async context => {
-  console.log(context);
-
-  // const data = await request({ query, variables: { locale: context.locale } });
-  const data = null;
-  console.log('__DATOCMS', data);
+  const data = await request({ query, variables: { locale: context.locale } });
 
   return {
     props: { data, lang: context.locale },

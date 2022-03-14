@@ -9,7 +9,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: var(--txtPrimaryClr);
+  background-color: var(--txt-primary-clr);
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
@@ -30,24 +30,26 @@ html[data-theme='light'] .theme_switcher {
   width: calc(var(--theme-button-width-height) / 1.7);
   height: calc(var(--theme-button-width-height) / 1.7);
   transform: translate(-50%, -50%) rotate(-55deg);
-  box-shadow: 14px 0 0 -6.5px var(--txtPrimaryClr),
-    -14px 0 0 -6.5px var(--txtPrimaryClr), 0 14px 0 -6.5px var(--txtPrimaryClr),
-    0 -14px 0 -6.5px var(--txtPrimaryClr),
-    10px 10px 0 -6.5px var(--txtPrimaryClr),
-    -10px -10px 0 -6.5px var(--txtPrimaryClr),
-    -10px 10px 0 -6.5px var(--txtPrimaryClr),
-    10px -10px 0 -6.5px var(--txtPrimaryClr);
+  box-shadow: 14px 0 0 -6.5px var(--txt-primary-clr),
+    -14px 0 0 -6.5px var(--txt-primary-clr),
+    0 14px 0 -6.5px var(--txt-primary-clr),
+    0 -14px 0 -6.5px var(--txt-primary-clr),
+    10px 10px 0 -6.5px var(--txt-primary-clr),
+    -10px -10px 0 -6.5px var(--txt-primary-clr),
+    -10px 10px 0 -6.5px var(--txt-primary-clr),
+    10px -10px 0 -6.5px var(--txt-primary-clr);
 }
 
 html[data-theme='dark'] .theme_switcher {
   width: calc(var(--theme-button-width-height) / 1.7);
   height: calc(var(--theme-button-width-height) / 1.7);
   transform: translate(-50%, -50%) rotate(0);
-  box-shadow: 0px 0 0 -0px var(--txtPrimaryClr),
-    -0px 0 0 -0px var(--txtPrimaryClr), 0 0px 0 -0px var(--txtPrimaryClr),
-    0 -0px 0 -0px var(--txtPrimaryClr), 0px 0px 0 -0px var(--txtPrimaryClr),
-    -0px -0px 0 -0px var(--txtPrimaryClr), -0px 0px 0 -0px var(--txtPrimaryClr),
-    0px -0px 0 -0px var(--txtPrimaryClr);
+  box-shadow: 0px 0 0 -0px var(--txt-primary-clr),
+    -0px 0 0 -0px var(--txt-primary-clr), 0 0px 0 -0px var(--txt-primary-clr),
+    0 -0px 0 -0px var(--txt-primary-clr), 0px 0px 0 -0px var(--txt-primary-clr),
+    -0px -0px 0 -0px var(--txt-primary-clr),
+    -0px 0px 0 -0px var(--txt-primary-clr),
+    0px -0px 0 -0px var(--txt-primary-clr);
 }
 
 html[data-theme='light'] .theme_switcher::after {
