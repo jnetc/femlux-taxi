@@ -1,4 +1,4 @@
-import styles from './prices-index.module.css';
+import styles from './prices.module.css';
 // Components
 import { LeftPriceBlock } from './left-price-block/LeftPriceBlock';
 import { RightPriceBlock } from './right-price-block/RightPriceBlock';

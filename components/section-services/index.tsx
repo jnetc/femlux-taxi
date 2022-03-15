@@ -1,4 +1,4 @@
-import styles from './services-index.module.css';
+import styles from './services.module.css';
 // Hook
 import { useLanguageState } from '@Hooks/useLanguageState';
 import { ServiceCard } from './service-card/ServiceCard';

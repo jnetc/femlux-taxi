@@ -1,4 +1,4 @@
-import styles from './home-index.module.css';
+import styles from './home.module.css';
 import { ActionBlock } from './action-buttons/ActionBlock';
 // Components
 import { FrontCarMob } from './front-car/FrontCarMob';

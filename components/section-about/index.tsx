@@ -1,4 +1,4 @@
-import styles from './about-index.module.css';
+import styles from './about.module.css';
 // Components
 import { LeftAboutBlock } from './left-about-block/LeftAboutBlock';
 import { RightAboutBlock } from './right-about-block/RightAboutBlock';

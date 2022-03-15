@@ -61,6 +61,16 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.svg-ellipse_fill {
+  fill: var(--bg);
+  transition: all 0.3s ease-in-out;
+}
+.svg-start_gradient {
+  stop-color: var(--primary);
+}
+.svg-end_gradient {
+  stop-color: var(--secondary);
+}
 
 @media (max-width: 960px) {
   .main-title {
