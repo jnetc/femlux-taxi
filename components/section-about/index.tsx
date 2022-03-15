@@ -1,28 +1,23 @@
 import styles from './about-index.module.css';
 // Components
-import { TitleH1 } from '@Components/titles/TitleH1';
-import { Description } from '@Components/description/Description';
+import { LeftAboutBlock } from './left-about-block/LeftAboutBlock';
+import { RightAboutBlock } from './right-about-block/RightAboutBlock';
 // Hook
 import { useLanguageState } from '@Hooks/useLanguageState';
 
 const About = () => {
-  const { language } = useLanguageState();
+  const { data } = useLanguageState();
   return (
     <section className={styles.module}>
       <header className={`${styles.header} section-header`}>
-        <TitleH1>{about[language]}</TitleH1>
-        <Description>
-          Если желаете во время, с комфортом и с хорошим настроением добраться
-          до места назначения - звоните и заказывайте!
-        </Description>
+        <h1 className="section-title">{data?.about.title}</h1>
+        <p className="description-section">{data?.about.description}</p>
       </header>
+      <div className={styles.about_content}>
+        <LeftAboutBlock />
+        <RightAboutBlock />
+      </div>
     </section>
   );
 };
 export default About;
-
-const about = {
-  en: 'about me',
-  ru: 'обо мне',
-  fi: 'minusta',
-};

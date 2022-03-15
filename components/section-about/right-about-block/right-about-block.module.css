@@ -1,0 +1,4 @@
+.module {
+  height: clamp(300px, 120vw, 450px);
+  position: relative;
+}

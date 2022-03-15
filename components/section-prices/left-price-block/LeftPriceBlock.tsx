@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styles from './left-price-block.module.css';
-import { TitleH2 } from '@Components/titles/TitleH2';
 import { PriceSwitcher } from './price-switcher/PriceSwitcher';
 import { TransitionArea } from './price-area/transition-area/TransitionArea';
 // Hook
@@ -18,7 +17,7 @@ export const LeftPriceBlock = () => {
       }}
     >
       <div className={styles.module}>
-        <TitleH2>{data?.price.priceLand}</TitleH2>
+        <h2 className="price-block-title">{data?.price.priceLand}</h2>
         <p className="paragraph align-center">{data?.price.priceLandDesc}</p>
         <PriceSwitcher />
         <div className={styles.wrapper}>

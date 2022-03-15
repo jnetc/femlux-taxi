@@ -5,3 +5,9 @@
   align-items: center;
   gap: 2rem;
 }
+
+@media (max-width: 960px) {
+  .module {
+    gap: 1rem;
+  }
+}

@@ -35,6 +35,14 @@ export function request({
 
 export const query = gql`
   query MyQuery($locale: SiteLocale) {
+    _site {
+      globalSeo(locale: $locale) {
+        fallbackSeo {
+          description
+          title
+        }
+      }
+    }
     home(locale: $locale) {
       title
       description
@@ -77,6 +85,16 @@ export const query = gql`
         title
         description
         iconName
+      }
+    }
+    about(locale: $locale) {
+      title
+      description
+      name
+      proff
+      aboutMe
+      avatar {
+        url(imgixParams: { h: "250", w: "250" })
       }
     }
   }

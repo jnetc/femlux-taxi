@@ -1,7 +1,5 @@
 import styles from './prices-index.module.css';
 // Components
-import { TitleH1 } from '@Components/titles/TitleH1';
-import { Description } from '@Components/description/Description';
 import { LeftPriceBlock } from './left-price-block/LeftPriceBlock';
 import { RightPriceBlock } from './right-price-block/RightPriceBlock';
 import { Plus } from './plus-block/Plus';
@@ -13,8 +11,8 @@ const Prices = () => {
   return (
     <section className={styles.module}>
       <header className={`${styles.header} section-header`}>
-        <TitleH1>{data?.price.title}</TitleH1>
-        <Description>{data?.price.description}</Description>
+        <h1 className="section-title">{data?.price.title}</h1>
+        <p className="description-section">{data?.price.description}</p>
       </header>
       <div className={styles.price_content}>
         <LeftPriceBlock />

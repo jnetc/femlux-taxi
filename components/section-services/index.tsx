@@ -1,7 +1,4 @@
 import styles from './services-index.module.css';
-// Components
-import { TitleH1 } from '@Components/titles/TitleH1';
-import { Description } from '@Components/description/Description';
 // Hook
 import { useLanguageState } from '@Hooks/useLanguageState';
 import { ServiceCard } from './service-card/ServiceCard';
@@ -16,8 +13,8 @@ const Services = () => {
   return (
     <section className={styles.module}>
       <header className={`${styles.header} section-header`}>
-        <TitleH1>{data?.service.title}</TitleH1>
-        <Description>{data?.service.description}</Description>
+        <h1 className="section-title">{data?.service.title}</h1>
+        <p className="description-section">{data?.service.description}</p>
       </header>
       <div className={styles.services_content}>{serviceCards}</div>
     </section>

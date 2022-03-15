@@ -1,8 +1,6 @@
 import styles from './home-index.module.css';
 import { ActionBlock } from './action-buttons/ActionBlock';
 // Components
-import { TitleH1 } from '@Components/titles/TitleH1';
-import { Description } from '@Components/description/Description';
 import { FrontCarMob } from './front-car/FrontCarMob';
 import { FrontCar } from './front-car/FrontCar';
 // Hook
@@ -14,11 +12,11 @@ const Main = () => {
     <section className={styles.module}>
       <div className={styles.left_block}>
         <span className={styles.taxi_text}>TAXI</span>
-        <TitleH1 homeTitle>{data?.home.title}</TitleH1>
+        <h1 className="main-title">{data?.home.title}</h1>
         <div className={styles.insert_block}>
           <FrontCarMob />
         </div>
-        <Description homeTitle>{data?.home.description}</Description>
+        <p className="description-main">{data?.home.description}</p>
         <ActionBlock />
       </div>
       <div className={styles.right_block}>

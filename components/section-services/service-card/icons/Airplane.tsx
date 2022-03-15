@@ -1,7 +1,7 @@
-import styles from './airplane.module.css';
+import styles from './icons.module.css';
 export const Airplane = () => {
   return (
-    <div className={styles.module}>
+    <div className={`${styles.module} ${styles.airplane}`}>
       <svg viewBox="0 0 200 135">
         <path
           fillRule="evenodd"
