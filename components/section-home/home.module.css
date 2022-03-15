@@ -1,23 +1,18 @@
-.module {
-  height: max(800px, calc(100vh - var(--lang-button-height-width) - 4rem));
+/* block style in .home-section */
+/* when builded this class ????? */
+.right_block {
   display: flex;
-  align-items: center;
-  column-gap: clamp(1rem, 4vw, 10rem);
-  position: relative;
-}
-
-.right_block,
-.insert_block {
   max-height: 500px;
   flex-direction: column;
   flex: 0 1 60%;
   position: relative;
 }
-.right_block {
-  display: flex;
-}
 .insert_block {
   display: none;
+  max-height: 500px;
+  flex-direction: column;
+  flex: 0 1 60%;
+  position: relative;
 }
 .left_block {
   display: flex;
@@ -38,10 +33,6 @@
 }
 
 @media (max-width: 960px) {
-  .module {
-    height: 100%;
-    align-items: flex-start;
-  }
   .right_block {
     display: none;
   }

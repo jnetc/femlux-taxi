@@ -9,7 +9,7 @@ import { useLanguageState } from '@Hooks/useLanguageState';
 const Main = () => {
   const { data } = useLanguageState();
   return (
-    <section className={styles.module}>
+    <section className="home-section">
       <div className={styles.left_block}>
         <span className={styles.taxi_text}>TAXI</span>
         <h1 className="main-title">{data?.home.title}</h1>

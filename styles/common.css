@@ -72,12 +72,20 @@
   stop-color: var(--secondary);
 }
 
+.home-section {
+  height: max(800px, calc(100vh - var(--lang-button-height-width) - 4rem));
+  display: flex;
+  align-items: center;
+  column-gap: clamp(1rem, 4vw, 10rem);
+  position: relative;
+}
+
 @media (max-width: 960px) {
   .main-title {
     font-size: clamp(2.5em, 10vw, 5em);
   }
   .section-title {
-    font-size: clamp(2em, 5vw, 3em);
+    font-size: clamp(2em, 7vw, 4em);
     text-align: left;
   }
 
@@ -87,5 +95,9 @@
   }
   .price-block-title {
     font-size: clamp(1.2em, 10vw, 2em);
+  }
+  .home-section {
+    height: 100%;
+    align-items: flex-start;
   }
 }
