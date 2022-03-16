@@ -1,6 +1,6 @@
 import { Logo } from './Logo';
 import { NavLinks } from './nav-links/NavLinks';
-import styles from './index-nav.module.css';
+import styles from './navigation.module.css';
 // Components
 import { LangButton } from './lang-switch/LangButton';
 import { ThemeButton } from './theme-switch/ThemeButton';

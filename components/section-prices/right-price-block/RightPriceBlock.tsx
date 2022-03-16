@@ -7,7 +7,7 @@ export const RightPriceBlock = () => {
   const { data } = useLanguageState();
   return (
     <div className={styles.module}>
-      <h2 className="price-block-title">{data?.price.priceTrip}</h2>
+      <h2 className="h2-title">{data?.price.priceTrip}</h2>
       <p className="paragraph">{data?.price.priceTripDesc}</p>
       <Fare label={data?.price.priceByTime[0].label}>
         {data?.price.priceByTime[0].price} €

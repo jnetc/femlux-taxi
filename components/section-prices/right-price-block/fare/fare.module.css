@@ -1,6 +1,7 @@
 .module {
   padding-block-start: 1.5rem;
   position: relative;
+  color: var(--txt-primary-clr);
   font-size: clamp(4rem, 6vw, 6rem);
   font-weight: bold;
   text-shadow: 4px 4px var(--price-stretch-primary),

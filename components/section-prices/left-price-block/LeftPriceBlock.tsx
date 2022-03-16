@@ -17,7 +17,7 @@ export const LeftPriceBlock = () => {
       }}
     >
       <div className={styles.module}>
-        <h2 className="price-block-title">{data?.price.priceLand}</h2>
+        <h2 className="h2-title">{data?.price.priceLand}</h2>
         <p className="paragraph align-center">{data?.price.priceLandDesc}</p>
         <PriceSwitcher />
         <div className={styles.wrapper}>

@@ -15,7 +15,7 @@ export const ServiceCard = ({ data }: { data: ServiceType<string> }) => {
         {data.iconName === 'babesit' && <Babesit />}
         {data.iconName === 'pets' && <Pets />}
       </div>
-      <h2 className="price-block-title">{data.title}</h2>
+      <h2 className="h2-title">{data.title}</h2>
       <p className="paragraph">{data.description}</p>
     </article>
   );

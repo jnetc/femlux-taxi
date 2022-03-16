@@ -7,8 +7,9 @@ import { useLanguageState } from '@Hooks/useLanguageState';
 
 const About = () => {
   const { data } = useLanguageState();
+
   return (
-    <section className={styles.module}>
+    <section id="about">
       <header className={`${styles.header} section-header`}>
         <h1 className="section-title">{data?.about.title}</h1>
         <p className="description-section">{data?.about.description}</p>

@@ -20,7 +20,7 @@ class MyDocument extends Document {
         <Head>
           <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
         </Head>
-        <body>
+        <body id="home">
           <Main />
           <NextScript />
         </body>

@@ -8,11 +8,10 @@ export const LangMenuButton = ({
   path: string;
   lang: string;
 }) => {
-  const { push } = useRouter();
-
+  const { push, locale } = useRouter();
   return (
     <button
-      className={styles.module}
+      className={`${styles.module} ${lang === locale && styles.active}`}
       onClick={() => {
         push(`${path}`, `${path}`, { locale: lang });
       }}

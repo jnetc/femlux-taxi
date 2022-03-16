@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+
+import { useState, useEffect, useCallback } from 'react';
 // Hooks
 import { useLanguageState } from '@Hooks/useLanguageState';
 // Components
@@ -7,20 +8,21 @@ import { LangMenuButton } from './LangMenuButton';
 import styles from './lang-button.module.css';
 
 export const LangButton = () => {
-  const { asPath } = useRouter();
+  const { asPath, locale } = useRouter();
   const { languages } = useLanguageState();
 
   const [showLangMenu, setShowLangMenu] = useState(false);
 
-  const langMenuHandler = () => {
-    setShowLangMenu(!showLangMenu);
-  };
+  const langMenuHandler = useCallback(() => {
+    setShowLangMenu(true);
+    console.log('click');
+  }, []);
 
   // Handle outside click
   useEffect(() => {
     if (!showLangMenu) return;
 
-    const outsideClick = () => setShowLangMenu(!showLangMenu);
+    const outsideClick = () => setShowLangMenu(false);
     document.addEventListener('click', outsideClick);
 
     return () => document.removeEventListener('click', outsideClick);
@@ -36,13 +38,13 @@ export const LangButton = () => {
       aria-label="language switcher"
       title="language switcher"
       onClick={langMenuHandler}
-      // isActive={showLangMenu}
       className={
         showLangMenu
           ? `${styles.module} ${styles.show_menu}`
           : `${styles.module}`
       }
     >
+      {locale}
       {buttonsOrder}
     </div>
   );

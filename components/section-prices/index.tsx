@@ -8,8 +8,9 @@ import { useLanguageState } from '@Hooks/useLanguageState';
 
 const Prices = () => {
   const { data } = useLanguageState();
+
   return (
-    <section className={styles.module}>
+    <section id="prices">
       <header className={`${styles.header} section-header`}>
         <h1 className="section-title">{data?.price.title}</h1>
         <p className="description-section">{data?.price.description}</p>

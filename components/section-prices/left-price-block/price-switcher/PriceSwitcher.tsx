@@ -63,8 +63,6 @@ export const PriceSwitcher = () => {
     });
   }, [setSelect, language, width]);
 
-  console.log();
-
   const elements = labelArray.map((label, index) => {
     return (
       <div

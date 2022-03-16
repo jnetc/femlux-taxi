@@ -11,7 +11,7 @@ const Services = () => {
   });
 
   return (
-    <section className={styles.module}>
+    <section id="services">
       <header className={`${styles.header} section-header`}>
         <h1 className="section-title">{data?.service.title}</h1>
         <p className="description-section">{data?.service.description}</p>

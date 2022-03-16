@@ -1,18 +1,15 @@
 .module {
-  /* font-size: 5rem; */
   font-weight: bold;
   white-space: nowrap;
   color: var(--txt-primary-clr);
 }
 
 .small {
-  /* font-size: 4rem; */
   font-size: clamp(2.5rem, 4.2vw, 4rem);
   text-shadow: 2px 2px var(--price-stretch-primary),
     -2px -2px var(--price-stretch-secondary);
 }
 .large {
-  /* font-size: 6.5rem; */
   font-size: clamp(4rem, 8vw, 6.5rem);
   margin-inline: auto;
   text-shadow: 4px 4px var(--price-stretch-primary),

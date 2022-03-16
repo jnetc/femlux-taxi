@@ -21,7 +21,7 @@ const urls = [
     en: 'Home',
     fi: 'Etusivu',
     ru: 'Начальная',
-    anchor: '#home',
+    anchor: '/',
   },
   {
     en: 'Prices',
