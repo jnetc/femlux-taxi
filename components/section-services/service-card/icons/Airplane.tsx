@@ -2,7 +2,7 @@ import styles from './icons.module.css';
 export const Airplane = () => {
   return (
     <div className={`${styles.module} ${styles.airplane}`}>
-      <svg viewBox="0 0 200 135">
+      <svg viewBox="0 0 200 135" id="airplane">
         <path
           fillRule="evenodd"
           clipRule="evenodd"

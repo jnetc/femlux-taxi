@@ -40,7 +40,7 @@ const Home: NextPage = ({
   if (!data) {
     return <main>Sorry! This page not found.</main>;
   }
-  console.log('data', lang, languages);
+
   const assignType = data as DataType;
 
   return (

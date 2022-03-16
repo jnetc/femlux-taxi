@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 // Hooks
 import { useLanguageState } from '@Hooks/useLanguageState';
 // Components
@@ -13,10 +13,7 @@ export const LangButton = () => {
 
   const [showLangMenu, setShowLangMenu] = useState(false);
 
-  const langMenuHandler = useCallback(() => {
-    setShowLangMenu(true);
-    console.log('click');
-  }, []);
+  const langMenuHandler = () => setShowLangMenu(true);
 
   // Handle outside click
   useEffect(() => {

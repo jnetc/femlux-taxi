@@ -1,4 +1,5 @@
 .module {
+  width: 6rem;
   grid-column: 2;
   aspect-ratio: 1 / 1;
   margin-block: auto;

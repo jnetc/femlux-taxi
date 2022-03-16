@@ -9,6 +9,7 @@
 /coverage
 
 # next.js
+/_next/
 /.next/
 /out/
 
@@ -26,10 +27,8 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env
+.env.*
 
 # vercel
 .vercel
@@ -58,3 +57,6 @@ yarn-error.log*
 
 # Lighthouse reports
 *.report.html
+
+# Local Netlify folder
+.netlify

@@ -12,6 +12,11 @@
 .icon_container {
   position: relative;
 }
+
+.module:hover :global(#blobs) {
+  transform: scale(0.9);
+}
+
 @media (max-width: 480px) {
   .module {
     padding: 5rem 1.5rem;
