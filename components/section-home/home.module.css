@@ -30,6 +30,45 @@
   z-index: -1;
 }
 
+.scroll_down {
+  width: 22px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-radius: 20px;
+  border: 2px solid var(--primary);
+  transform: translateX(-50%);
+}
+.scroll_down::after {
+  content: '';
+  width: 12px;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  bottom: 4px;
+  left: 3px;
+  border-radius: inherit;
+  background-color: var(--primary);
+  animation: scroll 2s ease infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  99.99% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 @media (max-width: 960px) {
   .right_block {
     display: none;
@@ -45,6 +84,12 @@
     margin-inline: auto;
   }
   .taxi_text {
+    display: none;
+  }
+}
+
+@media (max-width: 1180px), (max-height: 888px) {
+  .scroll_down {
     display: none;
   }
 }

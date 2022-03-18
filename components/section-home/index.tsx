@@ -1,4 +1,5 @@
 import styles from './home.module.css';
+import Link from 'next/link';
 import { ActionBlock } from './action-buttons/ActionBlock';
 // Components
 import { FrontCarMob } from './front-car/FrontCarMob';
@@ -22,6 +23,14 @@ const Main = () => {
       <div className={styles.right_block}>
         <FrontCar />
       </div>
+      <Link href="#prices">
+        <a
+          className={styles.scroll_down}
+          role="button"
+          tabIndex={0}
+          aria-label="scroll down"
+        />
+      </Link>
     </section>
   );
 };

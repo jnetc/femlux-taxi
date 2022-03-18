@@ -26,7 +26,7 @@ html[data-theme='light'] {
   --primary-transparant-25: hsla(315, 100%, 70%, 0.25);
   --primary-transparant-15: hsla(315, 100%, 70%, 0.15);
   --dark-shadow-transparant-25: hsla(0, 0%, 0%, 0.15);
-  --dark-shadow-transparant-15: hsla(0, 0%, 0%, 0.05);
+  --dark-shadow-transparant-15: hsla(0, 0%, 78%, 0.15);
   --price-stretch-primary: hsla(var(--primary-value) / 0.3);
   --price-stretch-secondary: hsla(var(--secondary-value) / 0.3);
 }
@@ -41,7 +41,7 @@ html[data-theme='dark'] {
 
   --primary-transparant-25: hsla(315, 100%, 70%, 0.1);
   --primary-transparant-15: hsla(315, 100%, 70%, 0.05);
-  --dark-shadow-transparant-15: hsla(0, 0%, 0%, 0.15);
+  --dark-shadow-transparant-15: #00000026;
   --price-stretch-primary: hsla(var(--primary-value) / 0.5);
   --price-stretch-secondary: hsla(var(--secondary-value) / 0.5);
 }

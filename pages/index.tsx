@@ -80,7 +80,11 @@ export const getStaticProps: GetStaticProps = async context => {
   const data = await request({ query, variables: { locale: context.locale } });
 
   return {
-    props: { data, lang: context.locale, languages: context.locales },
+    props: {
+      data,
+      lang: context.locale,
+      languages: context.locales,
+    },
   };
 };
 
