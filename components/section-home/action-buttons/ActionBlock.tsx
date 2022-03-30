@@ -6,7 +6,7 @@ import { useLanguageState } from '@Hooks/useLanguageState';
 
 export const ActionBlock = () => {
   const { data } = useLanguageState();
-  const removeCountryIndex = data?.home.mainTelephoneNum.replace('+358', '');
+  const removeCountryIndex = data?.home.mainTelephoneNum.replace('+358', '0');
   return (
     <div className={styles.module}>
       <ActionButton />
