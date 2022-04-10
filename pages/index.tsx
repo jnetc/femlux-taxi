@@ -57,7 +57,6 @@ const Home: NextPage = ({
           name="description"
           content={assignType._site.globalSeo.fallbackSeo.description}
         />
-        <link rel="icon" href="/favicon.ico" />
         <style dangerouslySetInnerHTML={{ __html: extraCSS }} />
       </Head>
 
