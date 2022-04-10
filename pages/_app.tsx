@@ -30,6 +30,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="generator" content="Next.js" />
         <meta name="google" content="notranslate" />
         <meta
+          name="google-site-verification"
+          content="x9h2uyx-h3bGE1fd8H1PCXfjIfHxfWUzrVpbC45xU-o"
+        />
+        <meta
           name="keywords"
           content="taxi, femlux, tila taxi, такси, order taxi"
         />
